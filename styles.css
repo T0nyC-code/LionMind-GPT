@@ -1,0 +1,88 @@
+/* static/styles.css */
+:root {
+  --bg: #f5f7fa;
+  --card: #ffffff;
+  --accent: #0b5cff;
+  --muted: #6b7280;
+  --bot: #e6f0ff;
+  --you: #f3f4f6;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:#0f172a;
+}
+
+.container{
+  max-width:820px;
+  margin:48px auto;
+  padding:20px;
+}
+
+header{ text-align:center; margin-bottom:18px;}
+h1{ margin:0; font-size:28px;}
+.subtitle{ margin:4px 0 0; color:var(--muted);}
+
+.chat-panel{
+  background:var(--card);
+  border-radius:12px;
+  padding:18px;
+  box-shadow:0 6px 18px rgba(15,23,42,0.06);
+}
+
+.exchange{ display:flex; flex-direction:column; gap:12px; margin-bottom:14px; }
+
+.bubble{
+  padding:12px 14px;
+  border-radius:10px;
+  line-height:1.4;
+  max-width:100%;
+  word-wrap:break-word;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+}
+.you{
+  background:var(--you);
+  align-self:flex-end;
+  border:1px solid rgba(0,0,0,0.03);
+}
+.bot{
+  background:var(--bot);
+  align-self:flex-start;
+  border:1px solid rgba(11,92,255,0.06);
+}
+
+.chat-form textarea{
+  width:100%;
+  height:120px;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #e6e9ef;
+  resize: vertical;
+  font-size:14px;
+}
+
+.form-row{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:10px;
+}
+
+.btn{
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:10px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.btn:hover{ filter:brightness(0.98); }
+
+.hint{ color:var(--muted); font-size:13px; }
+footer{ text-align:center; margin-top:12px; color:var(--muted); font-size:13px;}
+.sr-only{ position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
