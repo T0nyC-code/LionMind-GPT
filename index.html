@@ -1,0 +1,36 @@
+<!-- templates/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LionMind-GPT — Chat</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>LionMind-GPT</h1>
+      <p class="subtitle">Prototype chatbot — ask about the project, code, or logs.</p>
+    </header>
+
+    <section class="chat-panel">
+      {% if message and reply %}
+      <div class="exchange">
+        <div class="bubble you"><strong>You:</strong><br>{{ message }}</div>
+        <div class="bubble bot"><strong>LionMind-GPT:</strong><br>{{ reply }}</div>
+      </div>
+      {% endif %}
+
+      <form method="post" action="/chat" class="chat-form">
+        <label for="message" class="sr-only">Your message</label>
+        <textarea id="message" name="message" placeholder="Type your question here (max ~80 words)..." required></textarea>
+        <div class="form-row">
+          <button type="submit" class="btn">Send</button>
+          <span class="hint">Stateless demo — only last exchange shown.</span>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
